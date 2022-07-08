@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container.main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    width: 450px;
+    height: 450px;
+}
+
+.row {
+    display: flex;
+}
+
+#r0 .wrapper {
+    border-top: none;
+}
+
+#r2 .wrapper {
+    border-bottom: none;
+}
+
+.wrapper:nth-child(3n-2) {
+    border-left: none;
+}
+
+.wrapper:nth-child(3n) {
+    border-right: none;
+}
+
+.cell {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.wrapper {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #a8dadc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-out;
+}
+
+.invisibility {
+    display: none;
+}
+
+svg.x path {
+    fill: #457b9d;
+}
+
+svg.o path {
+    fill: #1d3557;
+}
+
+.winner {
+    transform: scale(1.2);
+}
+
+.winner svg>path {
+    fill: #06d6a0;
+}
+
+.add-background {
+    background-color: #faedcd;
+}
+
+.container.scoreboard {
+    display: grid;
+    grid-template-columns: 150px 100px 150px;
+    justify-content: center;
+    justify-items: center;
+
+    margin-top: 20px;
+}
+
+.container.player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container.button {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.container.scoreboard div:last-child {
+    grid-column: 3 / 4;
+}
+
+.container.scoreboard > div {
+    padding: 5px;
+    font-size: larger;
+    color: #1d3557;
+}
+
+.container.scoreboard .score {
+    font-size: 30px;
+}
+
+.not-active {
+    opacity: 0.5;
+}
+
+.container.message {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1d3557;
+    color: whitesmoke;
+}
